@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+.flexcontainer {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexcontainertext {
+    padding: 3rem;
+}
+
+.flexcontainertext p{
+    color: #C59B9D;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-top: -70px;
+    width: 35vw;
+}
+
+h3 {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #C59B9D;
+    letter-spacing: 1.3rem;
+    margin-top: 8.3rem;
+}
+
+h4 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #433A3B;
+    letter-spacing: 1.3rem;
+    margin-top: -4.5rem;
+}
+
+.soon {
+    margin-top: -5.7rem;
+}
+
+input[type=text], select {
+    width: 80%;
+    padding: 1.0rem 1.9rem;
+    margin: 2.8rem 0;
+    border: 1px solid #C59B9D;
+    border-radius: 4rem;
+    font-family: inherit;
+    color: #7c6263;
+    font-size: 1rem;
+  }
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+}
+
+button {
+    width: 6.5rem;
+    background-color: #C59B9D;
+    color: white;
+    padding: 1.0rem 1.9rem;
+    margin-left: -3rem;
+    background-image: linear-gradient(to right, #F5B8B7 , #F09091);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px rgb(245, 183, 183)
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #FACECF , #FACECF);
+}
+
+/*NIEUWE FORM STIJLEN       */
+
+#form {
+    position: relative;
+}
+
+#form #inputBox {
+    position: relative;
+}
+
+.centerbox {
+    display: flex;
+    align-items: center;
+}
+
+#text {
+    display: block;
+    color: #000;
+    font-weight: 500;
+    margin-top: -2rem;
+    font-size: 0.7rem;
+    margin-left: 2rem;
+}
+
+#form.invalid .inputBox::before {
+    content: '';
+    position: absolute;
+    right: 7rem;
+    top: 3.6rem;
+    width: 24px;
+    height: 24px;
+    background: url(images/icon-error.svg);
+    background-size: cover;
+z-index: 1000;
+}
+
+#form.invalid #email{
+    border: 1px solid #e40813;
+}
+
+@media (max-width: 550px){
+
+    .flexcontainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 80vw;
+        }
+
+        .flexcontainertextlogo {
+            grid-column: 1;
+        }
+
+        .flexcontainerphoto {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .flexcontainertext {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .inputBox {
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
